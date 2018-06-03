@@ -1,0 +1,8 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+  - docker build -t the-image .
+  - docker run -i --rm the-image az --help
